@@ -1,0 +1,64 @@
+package org.myweb.first.member.model.dto;
+
+import java.sql.Date;
+
+//dto (vo, entity, bean) 작성 규칙
+//1. 반드시 직렬화할 것 
+//2. 모든 필드(멤버변수, property) 반드시 private : 캡슐화 할것 
+//3. 기본생성자, 매개변수 있는 생성자 작성할 것
+//4. 모든 필드에 대한 getter and setter 작성할 것
+//5. toString () 오버라이딩
+//선택사항 : equals(), clone(), hashCode() 오버라이딩
+public class Member implements java.io.Serializable{
+	private static final long serialVersionUID = -4190375229839038309L;
+
+	private String userid; //USERID	VARCHAR2(50 BYTE)
+	private String userpwd; //USERPWD	VARCHAR2(100 BYTE)
+	private String username; //USERNAME	VARCHAR2(20 BYTE)
+	private String gender; //GENDER	CHAR(1 BYTE)
+	private int age; //AGE	NUMBER(3,0)
+	private String phone; //PHONE	VARCHAR2(13 BYTE)
+	private String email; //EMAIL	VARCHAR2(30 BYTE)
+	private java.sql.Date enrolldate;	//ENROLL_DATE	DATE
+	private java.sql.Date  lastmodified;	//LASTMODIFIED	DATE
+	private String signtype;	//SIGNTYPE	VARCHAR2(10 BYTE)
+	private String adminyn;  //ADMIN_YN	CHAR(1 BYTE)
+	private String loginok;		//LOGIN_OK	CHAR(1 BYTE)
+	private String photofilename; // PHOTO_FILENAME	VARCHAR2(100 BYTE)
+	
+	public Member() {
+		super();
+	}
+
+	public Member(String userid, String userpwd, String username, String gender, int age, String phone, String email) {
+		super();
+		this.userid = userid;
+		this.userpwd = userpwd;
+		this.username = username;
+		this.gender = gender;
+		this.age = age;
+		this.phone = phone;
+		this.email = email;
+	}
+
+	public Member(String userid, String userpwd, String username, String gender, int age, String phone, String email,
+			Date enrolldate, Date lastmodified, String signtype, String adminyn, String loginok, String photofilename) {
+		super();
+		this.userid = userid;
+		this.userpwd = userpwd;
+		this.username = username;
+		this.gender = gender;
+		this.age = age;
+		this.phone = phone;
+		this.email = email;
+		this.enrolldate = enrolldate;
+		this.lastmodified = lastmodified;
+		this.signtype = signtype;
+		this.adminyn = adminyn;
+		this.loginok = loginok;
+		this.photofilename = photofilename;
+	}
+	
+	
+	
+}

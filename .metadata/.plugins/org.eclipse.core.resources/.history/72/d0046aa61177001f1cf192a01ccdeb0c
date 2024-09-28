@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<%-- 로그인 하지 않았을 때 --%>
+
+<%-- 관리자가 로그인 했을 때 --%>
+</body>
+</html>

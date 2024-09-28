@@ -1,0 +1,91 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ModuERP</title>
+
+<style type="text/css">
+
+/* 전체 페이지 기본 스타일 */
+body, html {
+	margin-top: 2% ;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 0;
+    background-color: #f4f4f4; /* 배경색 추가 */
+}
+
+/* 구분선 스타일 */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+/* 이미지 컨테이너 스타일 */
+div#image-container {
+
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+    gap: 200px; /* 이미지 사이 간격 더 넓게 */
+    background-color: #ffffff; /* 이미지 배경을 흰색으로 고정 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* 입체감 증가 */
+    border-radius: 20px; /* 모서리 둥글게 */
+    margin: 40px auto; /* 페이지 중앙 정렬 */
+    width: 100%; /* 가로를 거의 가득 차게 */
+    height: 700px;
+    max-width: 2400px; /* 최대 폭 확대 */
+}
+
+/* 서브 이미지 스타일 */
+div#image-container img {
+    width: 800px; /* 이미지 크기를 유지 */
+    height: auto; /* 비율 유지 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 더 진한 그림자 효과로 입체감 */
+    border-radius: 20px; /* 모서리 둥글게 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 시 확대 및 그림자 변화 */
+}
+
+/* 이미지 호버 시 확대 효과 */
+div#image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* 호버 시 그림자 더 진하게 */
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+function movePage(){
+	location.href = "loginPage.do";
+}
+</script>
+
+</head>
+<body>
+
+
+<!-- 서브 이미지 컨테이너 -->
+<div id="image-container">
+    <img src="${pageContext.request.contextPath}/resources/images/moduerp_red.jpg" alt="ModuERP Red">
+    <img src="${pageContext.request.contextPath}/resources/images/moduerp_green.jpg" alt="ModuERP Green">
+</div>
+
+
+
+<hr style="clear:both;">
+
+<!-- 메뉴바 임포트 -->
+<c:import url="/WEB-INF/views/common/menubar.jsp" />
+
+<hr style="clear:both;">
+
+<!-- 푸터 임포트 -->
+<c:import url="/WEB-INF/views/common/footer.jsp" />
+
+</body>
+</html>

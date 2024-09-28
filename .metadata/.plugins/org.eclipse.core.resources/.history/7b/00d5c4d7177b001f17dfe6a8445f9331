@@ -1,0 +1,10 @@
+package org.myweb.first.common;
+
+import org.springframework.web.servlet.view.AbstractView;
+
+public class FileDownloadView extends AbstractView {
+//	파일 다운로드 처리용 View 클래스임
+//	스프링에
+//	반드시
+	
+}

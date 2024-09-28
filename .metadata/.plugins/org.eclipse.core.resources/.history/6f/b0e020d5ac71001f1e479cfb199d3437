@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="org.myweb.first.member.model.dto.Member"%>
+<%
+	Member member = (Member)request.getAttribute("member");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>first</title>
+<style type="text/css">
+	table th { background-color: #9ff, }
+	table#outer { border: 2px solid navy; }
+</style>
+</head>
+<body>
+<h1 align="center">내정보보기 페이지</h1>
+<br>
+<form action="enroll.do" method="post">
+<table id="outer" align="center" width="700" cellspacing="5" cellpadding="0">
+	<tr><th whdth="120">*아이디</th>
+		<td>
+			<input type="text" name="userid" id="userid" readonly=> 
+		</td></tr>
+	<tr><th>*암 호</th><td><input type="password" name="userpwd" required></td></tr>
+	<tr><th>*암호확인</th><td><input type="password2" required></td></tr>
+	<tr><th>*이 름</th><td><input type="text" name="username" id="username" required=></td></tr>
+	<tr><th>*성 별</th>
+	<td>
+		<input type="radio" name="gender" id="gender" value="M"> 남자 &nbsp;
+		<input type="radio" name="gender" id="gender" value="F"> 여자
+	</td></tr>
+	<tr><th>*나 이</th><td><input type="number" name="age" min ="19" value ="20" required></td></tr>
+	<tr><th>*전화번호</th><td><input type="tel" name="phone" required></td></tr>
+	<tr><th>*이메일</th><td><input type="email" name="email" required></td></tr>
+	<tr><th colspan="2">
+		<input type="submit" value="가입하기"> &nbsp;
+		<input type="reset" value="작성취소"> &nbsp;
+		<a href="main.do">나가라</a>
+	</th></tr>
+</table>
+
+
+
+</body>
+</html>

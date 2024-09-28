@@ -1,0 +1,23 @@
+package org.myweb.first.member.model.service;
+
+import org.apache.ibatis.session.SqlSession;
+import org.myweb.first.member.model.dao.MemberDao;
+import org.myweb.first.member.model.dto.User;
+import org.springframework.stereotype.Service;
+
+//스프링에서는 서비스 인터페이스를 상속받은 후손클래스를 작성하도록 정해놓음
+@Service
+public class MemberServiceImpl implements MemberService{
+	private MemberDao mdao = new MemberDao();
+	//마이바티스가 제공하는 Connection, Transaction, Execution 을 담당하는 클래스
+	private SqlSession session;
+	
+	
+	
+	public User selectLogin(User user)  {
+		session = getSession();
+		User loginUser = mdao.selectLogin(session, user);
+		session.close();
+		return loginUser;
+	}
+}

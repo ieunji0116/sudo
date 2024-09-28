@@ -1,0 +1,6 @@
+package org.myweb.first.member.model.dto;
+
+//dto (vo, entity, bean)
+public class Member {
+
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [28/Sep/2024:11:57:11 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:57:17 +0900] "GET /first/ HTTP/1.1" 200 10173
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:57:17 +0900] "GET /first/resources/images/moduerp_green.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:57:17 +0900] "GET /first/resources/images/moduerp_red.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:57:17 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:57:54 +0900] "POST /first/login.do HTTP/1.1" 200 10345
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:58:32 +0900] "GET /first/erpmain.do HTTP/1.1" 200 3697
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:58:32 +0900] "GET /first/resources/js/jquery-3.7.1.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2024:11:59:48 +0900] "GET /first/main.do HTTP/1.1" 200 10345

@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Footer Example</title>
+<style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #002147; /* Deep navy */
+        color: #f1f1f1; /* Off-white */
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        color: #f1f1f1;
+        text-decoration: none;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    footer p {
+        margin: 5px 0;
+        line-height: 1.6;
+    }
+
+    footer span {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        footer {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+</head>
+<body>
+<footer>
+    <p>&copy; 2024 <a href="mailto:copyright@test.org">copyright@test.org</a></p>
+    <span>클라우드 AI 대화형 웹 애플리케이션 개발자 양성과정</span>
+    <span>서울시 서초구 신논현동 ICT기술협회</span>
+    <span>TEL: 02-1234-5678 | FAX: 02-1234-5679</span>
+</footer>
+</body>
+</html>

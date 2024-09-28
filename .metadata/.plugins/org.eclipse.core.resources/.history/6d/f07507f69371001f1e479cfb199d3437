@@ -1,0 +1,24 @@
+package org.myweb.first.member.model.dto;
+
+//dto (vo, entity, bean) 작성 규칙
+//1. 반드시 직렬화할 것 
+//2. 모든 필드(멤버변수, property) 반드시 private : 캡슐화 할것 
+//3. 기본생성자, 매개변수 있는 생성자 작성할 것
+public class Member implements java.io.Serializable{
+	private static final long serialVersionUID = -4190375229839038309L;
+
+	private String userid; //USERID	VARCHAR2(50 BYTE)
+	private String userpwd; //USERPWD	VARCHAR2(100 BYTE)
+	private String username; //USERNAME	VARCHAR2(20 BYTE)
+	private String gender; //GENDER	CHAR(1 BYTE)
+	private int age; //AGE	NUMBER(3,0)
+	private String phone; //PHONE	VARCHAR2(13 BYTE)
+	private String email; //EMAIL	VARCHAR2(30 BYTE)
+	private java.sql.Date enrolldate;	//ENROLL_DATE	DATE
+	private java.sql.Date  lastmodified;	//LASTMODIFIED	DATE
+	private String signtype;	//SIGNTYPE	VARCHAR2(10 BYTE)
+	private String adminyn;  //ADMIN_YN	CHAR(1 BYTE)
+	private String loginok;		//LOGIN_OK	CHAR(1 BYTE)
+	private String photofilename; // PHOTO_FILENAME	VARCHAR2(100 BYTE) 
+	
+}

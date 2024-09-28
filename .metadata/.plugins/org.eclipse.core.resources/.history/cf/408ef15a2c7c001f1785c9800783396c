@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Navigation Menu</title>
+
+<style type="text/css">
+
+body {
+    margin-top: 60px; /* 네비게이션 바 높이만큼 상단 여백을 설정 */
+    font-family: 'Arial', sans-serif;
+}
+
+/* 상단 메뉴바 */
+nav {
+	padding: 8px ;
+    width: 100%; /* 메뉴바 너비 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background: white;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    display: flex; /* nav 안의 요소들을 한 줄에 배치 */
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+nav ul li {
+    margin: 0 20px; /* 메뉴 항목 간격 */
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 16px; /* 텍스트 크기 */
+    position: relative; /* 밑줄에 대한 상대 위치 설정 */
+    transition: background 0.3s ease, transform 0.3s ease; /* 호버 효과 애니메이션 */
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: black; /* 밑줄 색상 */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease; /* 밑줄 애니메이션 */
+}
+nav ul li a:hover::after {
+    width: 100%; /* 호버 시 밑줄이 왼쪽에서 오른쪽으로 그어짐 */
+}
+nav ul li a i {
+    margin-right: 10px; /* 아이콘과 텍스트 간격 */
+}
+
+
+</head>
+<body>
+
+	<nav>
+		<a href="main.do" class="moduerp-logo">ModuERP</a>
+		<ul id="menubar">
+			<li><a href="nlist.do?page=1"><i class="fas fa-bullhorn"></i>공지사항</a></li>
+			<li><a href="blist.do?page=1"><i class="fas fa-clipboard"></i>구매</a></li>
+			<li><a href="moveAjax.do"><i class="fas fa-code"></i>체험페이지</a></li>
+			<li><a href="moveApi.do"><i class="fas fa-plug"></i>고객서비스</a></li>
+		</ul>
+
+	</nav>
+
+
+
+</body>
+</html>

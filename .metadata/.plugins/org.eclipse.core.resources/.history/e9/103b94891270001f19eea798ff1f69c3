@@ -1,0 +1,6 @@
+package org.myweb.first.member.controller;
+
+@Controller
+public class MemberController {
+
+}

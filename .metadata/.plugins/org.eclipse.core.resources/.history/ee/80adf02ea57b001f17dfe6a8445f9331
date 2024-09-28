@@ -1,0 +1,6 @@
+
+ackage org.myweb.first.notice.controller;
+
+public class noticeController {
+
+}

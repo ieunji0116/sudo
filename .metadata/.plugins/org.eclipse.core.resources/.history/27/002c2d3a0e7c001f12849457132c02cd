@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>first</title>
+
+<style type="text/css">
+    /* 하얀 박스 스타일 */
+    .content-box {
+        width: 80%; /* 화면에 가득 차지 않게 설정 */
+        height: 70vh; /* 화면 높이의 70% 설정 */
+        background-color: white;
+        margin: 6% auto 0 auto; /* 위쪽에 마진탑 6%, 중앙 정렬 */
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    }
+</style>
+
+<script type="text/javascript" src="${ pageContext.servletContext.contextPath }/resources/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript">
+function movePage() {
+    location.href = "loginPage.do";
+}
+</script>
+</head>
+
+<body>
+    <!-- 서브헤더 JSP 임포트 -->
+    <c:import url="/WEB-INF/views/common/erpmenubar.jsp" />
+
+    <!-- ERP 내용을 담는 하얀 박스 -->
+    <div class="content-box">
+        <h1>ERP Content</h1>
+        <!--

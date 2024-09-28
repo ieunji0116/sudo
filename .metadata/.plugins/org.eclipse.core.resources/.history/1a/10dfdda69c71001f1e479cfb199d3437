@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>first</title>
+</head>
+<body>
+<h1 align="center">회원가입 페이지</h1>
+<br>
+<form action="enroll.do" method="post">
+<table id="outer" align="center" width="700" cellspacing="5" cellpadding="0">
+	<tr><th colspan="2">회원 정보를 입력해 주세요. (* 표시는 필수입력 항목 입니다.)</th></tr>
+	<tr><th whdth="120">*아이디</th>
+		<td>
+			<input type="text" name="userId" id="userId" required=> &nbsp;
+			<input type="button" value="중복체크" onclick="return dupIdCheck();">
+		</td></tr>
+	<tr><th>*암 호</th><td></td></tr>
+	<tr><th>*암호확인</th><td></td></tr>
+	<tr><th>*이 름</th><td></td></tr>
+	<tr><th>*나 이</th><td></td></tr>
+	<tr><th>*전화번호</th><td></td></tr>
+	<tr><th>*이메일</th><td></td></tr>
+	<tr><th colspan="2">
+		<input type="submit" value="가입하기"> &nbsp;
+		<input type="reset" value="작성취소"> &nbsp;
+		<a href="main.do">나가라</a>
+	</th></tr>
+</table>
+
+
+
+</body>
+</html>
